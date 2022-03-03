@@ -1,10 +1,10 @@
 package base
 
 import (
-	"fmt"
 	//_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"
 	"github.com/mszhangyi/infra"
+	"github.com/sirupsen/logrus"
 	"time"
 	"xorm.io/xorm"
 )
@@ -28,7 +28,7 @@ func (s *DatabaseStarter) Setup() {
 	if err != nil {
 		panic("数据库orm：" + err.Error())
 	}
-	fmt.Print("db_orm 开始启动了", engine.Ping())
+	logrus.Debug("db_orm 开始启动了", engine.Ping())
 	//设置连接复用时间
 	engine.SetConnMaxLifetime(30 * time.Second)
 	engine.SetMaxOpenConns(5000)
