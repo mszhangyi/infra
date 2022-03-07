@@ -1,6 +1,6 @@
 package base
 
-/*import (
+import (
 	"fmt"
 	"github.com/mszhangyi/infra/utils"
 	"github.com/mszhangyi/work/udpLog"
@@ -49,9 +49,9 @@ func InitLog() {
 		fmt.Print(err)
 	}
 	log.SetOutput(logger)
-}*/
+}
 
-import (
+/*import (
 	"fmt"
 	"github.com/lestrrat/go-file-rotatelogs"
 	"github.com/mattn/go-colorable"
@@ -169,4 +169,4 @@ func InitLog() {
 	log.AddHook(lfHook)
 	//
 	log_writer = writer
-}
+}*/
